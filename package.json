@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
+    "remix-auth": "^3.4.0",
     "trpc-remix": "^10.0.0-alpha.40.1",
     "zod": "^3.21.4"
   },
