@@ -23,7 +23,12 @@ OAuth.use(
       clientID: !process.env.CLIENT_ID ? "" : process.env.CLIENT_ID,
       clientSecret: !process.env.CLIENT_SECRET ? "" : process.env.CLIENT_SECRET,
       scope: ["openid", "email", "profile"],
-      callbackURL: `http://localhost:3000/auth/${SocialsProvider.GOOGLE}/callback`,
+      callbackURL:
+        process.env.NODE_ENV === "production"
+          ? !process.env.CALLBACK_URL
+            ? ""
+            : process.env.CALLBACK_URL
+          : `http://localhost:3000/auth/${SocialsProvider.GOOGLE}/callback`,
     },
     handleSocialAuthCallback
   )
