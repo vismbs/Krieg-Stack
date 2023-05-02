@@ -521,3 +521,15 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.flex {
+  display: flex;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.outline {
+  outline-style: solid;
+}
